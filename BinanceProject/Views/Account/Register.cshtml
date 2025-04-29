@@ -1,0 +1,29 @@
+﻿@model BinanceProject.Models.User
+
+<h2>Registro</h2>
+
+<form asp-action="Register" method="post">
+    <div>
+        <label asp-for="UserName"></label>
+        <input asp-for="UserName" />
+        <span asp-validation-for="UserName"></span>
+    </div>
+
+    <div>
+        <label asp-for="Email"></label>
+        <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+
+    <div>
+        <label asp-for="PasswordHash"></label>
+        <input asp-for="PasswordHash" type="password" />
+        <span asp-validation-for="PasswordHash"></span>
+    </div>
+
+    <button type="submit">Registrarse</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
